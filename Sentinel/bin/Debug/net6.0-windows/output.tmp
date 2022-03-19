@@ -1,0 +1,111 @@
+3C 21 64 6F 63 74 79 70 65 20 68 74 6D 6C 3E 0A 3C 68 74 6D 6C 20 6C 61 6E | <!doctype html>.<html lan |
+67 3D 22 65 6E 22 3E 0A 3C 68 65 61 64 3E 0A 3C 6D 65 74 61 20 63 68 61 72 | g="en">.<head>.<meta char |
+73 65 74 3D 22 75 74 66 2D 38 22 3E 0A 3C 6D 65 74 61 20 68 74 74 70 2D 65 | set="utf-8">.<meta http-e |
+71 75 69 76 3D 22 58 2D 55 41 2D 43 6F 6D 70 61 74 69 62 6C 65 22 20 63 6F | quiv="X-UA-Compatible" co |
+6E 74 65 6E 74 3D 22 49 45 3D 65 64 67 65 22 3E 0A 0A 3C 6D 65 74 61 20 6E | ntent="IE=edge">..<meta n |
+61 6D 65 3D 22 64 65 73 63 72 69 70 74 69 6F 6E 22 20 63 6F 6E 74 65 6E 74 | ame="description" content |
+3D 22 22 3E 0A 3C 6D 65 74 61 20 6E 61 6D 65 3D 22 61 75 74 68 6F 72 22 20 | ="">.<meta name="author"  |
+63 6F 6E 74 65 6E 74 3D 22 22 3E 0A 3C 6C 69 6E 6B 20 72 65 6C 3D 22 69 63 | content="">.<link rel="ic |
+6F 6E 22 20 68 72 65 66 3D 22 61 73 73 65 74 73 2F 6C 6F 67 6F 2E 70 6E 67 | on" href="assets/logo.png |
+22 3E 0A 3C 74 69 74 6C 65 3E 57 65 73 44 42 2E 63 6F 6D 20 2D 20 48 6F 6D | ">.<title>WesDB.com - Hom |
+65 3C 2F 74 69 74 6C 65 3E 0A 3C 6C 69 6E 6B 20 72 65 6C 3D 22 73 74 79 6C | e</title>.<link rel="styl |
+65 73 68 65 65 74 22 20 68 72 65 66 3D 22 68 74 74 70 73 3A 2F 2F 73 74 61 | esheet" href="https://sta |
+63 6B 70 61 74 68 2E 62 6F 6F 74 73 74 72 61 70 63 64 6E 2E 63 6F 6D 2F 62 | ckpath.bootstrapcdn.com/b |
+6F 6F 74 73 74 72 61 70 2F 33 2E 34 2E 31 2F 63 73 73 2F 62 6F 6F 74 73 74 | ootstrap/3.4.1/css/bootst |
+72 61 70 2E 6D 69 6E 2E 63 73 73 22 20 69 6E 74 65 67 72 69 74 79 3D 22 73 | rap.min.css" integrity="s |
+68 61 33 38 34 2D 48 53 4D 78 63 52 54 52 78 6E 4E 2B 42 64 67 30 4A 64 62 | ha384-HSMxcRTRxnN+Bdg0Jdb |
+78 59 4B 72 54 68 65 63 4F 4B 75 48 35 7A 43 59 6F 74 6C 53 41 63 70 31 2B | xYKrThecOKuH5zCYotlSAcp1+ |
+63 38 78 6D 79 54 65 39 47 59 67 31 6C 39 61 36 39 70 73 75 22 20 63 72 6F | c8xmyTe9GYg1l9a69psu" cro |
+73 73 6F 72 69 67 69 6E 3D 22 61 6E 6F 6E 79 6D 6F 75 73 22 3E 0A 3C 6C 69 | ssorigin="anonymous">.<li |
+6E 6B 20 72 65 6C 3D 22 73 74 79 6C 65 73 68 65 65 74 22 20 68 72 65 66 3D | nk rel="stylesheet" href= |
+22 73 74 79 6C 65 31 2E 63 73 73 22 3E 0A 3C 6D 65 74 61 20 6E 61 6D 65 3D | "style1.css">.<meta name= |
+22 76 69 65 77 70 6F 72 74 22 20 63 6F 6E 74 65 6E 74 3D 22 77 69 64 74 68 | "viewport" content="width |
+3D 64 65 76 69 63 65 2D 77 69 64 74 68 2C 20 69 6E 69 74 69 61 6C 2D 73 63 | =device-width, initial-sc |
+61 6C 65 3D 31 2E 30 22 3E 0A 3C 73 74 79 6C 65 3E 0A 20 20 20 20 3C 2F 73 | ale=1.0">.<style>.    </s |
+74 79 6C 65 3E 0A 3C 2F 68 65 61 64 3E 0A 3C 62 6F 64 79 3E 0A 3C 6E 61 76 | tyle>.</head>.<body>.<nav |
+20 63 6C 61 73 73 3D 22 6E 61 76 62 61 72 20 6E 61 76 62 61 72 2D 69 6E 76 |  class="navbar navbar-inv |
+65 72 73 65 20 6E 61 76 62 61 72 2D 66 69 78 65 64 2D 74 6F 70 22 3E 0A 3C | erse navbar-fixed-top">.< |
+64 69 76 20 63 6C 61 73 73 3D 22 63 6F 6E 74 61 69 6E 65 72 22 3E 0A 3C 64 | div class="container">.<d |
+69 76 20 63 6C 61 73 73 3D 22 6E 61 76 62 61 72 2D 68 65 61 64 65 72 22 3E | iv class="navbar-header"> |
+0A 3C 61 20 63 6C 61 73 73 3D 22 6E 61 76 62 61 72 2D 62 72 61 6E 64 22 20 | .<a class="navbar-brand"  |
+68 72 65 66 3D 22 23 22 3E 57 65 73 44 42 3C 2F 61 3E 0A 3C 2F 64 69 76 3E | href="#">WesDB</a>.</div> |
+0A 3C 2F 64 69 76 3E 0A 3C 2F 6E 61 76 3E 0A 0A 3C 64 69 76 20 63 6C 61 73 | .</div>.</nav>..<div clas |
+73 3D 22 6A 75 6D 62 6F 74 72 6F 6E 22 3E 0A 3C 64 69 76 20 63 6C 61 73 73 | s="jumbotron">.<div class |
+3D 22 63 6F 6E 74 61 69 6E 65 72 22 3E 0A 3C 68 31 3E 57 65 73 6C 65 79 20 | ="container">.<h1>Wesley  |
+4A 6F 6E 65 73 27 73 20 57 65 62 73 69 74 65 3C 2F 68 31 3E 0A 3C 70 3E 3C | Jones's Website</h1>.<p>< |
+61 20 63 6C 61 73 73 3D 22 62 74 6E 20 62 74 6E 2D 70 72 69 6D 61 72 79 20 | a class="btn btn-primary  |
+62 74 6E 2D 6C 67 22 20 68 72 65 66 3D 22 2F 63 64 6E 2D 63 67 69 2F 6C 2F | btn-lg" href="/cdn-cgi/l/ |
+65 6D 61 69 6C 2D 70 72 6F 74 65 63 74 69 6F 6E 23 39 35 65 32 66 66 66 61 | email-protection#95e2fffa |
+66 62 66 30 65 36 61 64 61 64 61 63 64 35 65 35 65 37 66 61 65 31 66 61 66 | fbf0e6adadacd5e5e7fae1faf |
+62 66 38 66 34 66 63 66 39 62 62 66 36 66 61 66 38 22 20 72 6F 6C 65 3D 22 | bf8f4fcf9bbf6faf8" role=" |
+62 75 74 74 6F 6E 22 3E 43 6F 6E 74 61 63 74 3C 2F 61 3E 3C 2F 70 3E 0A 3C | button">Contact</a></p>.< |
+2F 64 69 76 3E 0A 3C 2F 64 69 76 3E 0A 3C 64 69 76 20 63 6C 61 73 73 3D 22 | /div>.</div>.<div class=" |
+63 6F 6E 74 61 69 6E 65 72 20 6D 61 69 6E 22 3E 0A 0A 3C 64 69 76 20 63 6C | container main">..<div cl |
+61 73 73 3D 22 72 6F 77 22 3E 0A 3C 64 69 76 20 63 6C 61 73 73 3D 22 63 6F | ass="row">.<div class="co |
+6C 2D 6D 64 2D 34 22 3E 0A 3C 68 32 3E 56 69 65 77 20 50 72 6F 6A 65 63 74 | l-md-4">.<h2>View Project |
+73 3C 2F 68 32 3E 0A 3C 70 3E 56 69 65 77 20 6D 79 20 70 72 6F 6A 65 63 74 | s</h2>.<p>View my project |
+73 20 61 6E 64 20 73 65 65 20 77 68 61 74 20 49 27 6D 20 75 70 20 74 6F 2E | s and see what I'm up to. |
+20 3C 2F 70 3E 0A 3C 70 3E 3C 61 20 63 6C 61 73 73 3D 22 62 74 6E 20 62 74 |  </p>.<p><a class="btn bt |
+6E 2D 64 65 66 61 75 6C 74 22 20 68 72 65 66 3D 22 68 74 74 70 73 3A 2F 2F | n-default" href="https:// |
+67 69 74 68 75 62 2E 63 6F 6D 2F 77 65 73 6C 65 79 6A 6F 6E 65 73 30 30 31 | github.com/wesleyjones001 |
+2F 22 20 72 6F 6C 65 3D 22 62 75 74 74 6F 6E 22 3E 56 69 65 77 20 70 72 6F | /" role="button">View pro |
+6A 65 63 74 73 20 26 72 61 71 75 6F 3B 3C 2F 61 3E 3C 2F 70 3E 0A 3C 2F 64 | jects &raquo;</a></p>.</d |
+69 76 3E 0A 3C 64 69 76 20 63 6C 61 73 73 3D 22 63 6F 6C 2D 6D 64 2D 34 22 | iv>.<div class="col-md-4" |
+3E 0A 3C 68 32 3E 44 61 73 68 62 6F 61 72 64 3C 2F 68 32 3E 0A 3C 70 3E 56 | >.<h2>Dashboard</h2>.<p>V |
+69 65 77 20 44 61 73 68 62 6F 61 72 64 3C 2F 70 3E 0A 3C 70 3E 3C 61 20 63 | iew Dashboard</p>.<p><a c |
+6C 61 73 73 3D 22 62 74 6E 20 62 74 6E 2D 64 65 66 61 75 6C 74 22 20 68 72 | lass="btn btn-default" hr |
+65 66 3D 22 64 61 73 68 62 6F 61 72 64 2F 22 20 72 6F 6C 65 3D 22 62 75 74 | ef="dashboard/" role="but |
+74 6F 6E 22 3E 56 69 65 77 20 26 72 61 71 75 6F 3B 3C 2F 61 3E 3C 2F 70 3E | ton">View &raquo;</a></p> |
+0A 3C 2F 64 69 76 3E 0A 3C 2F 64 69 76 3E 0A 3C 68 72 3E 0A 3C 66 6F 6F 74 | .</div>.</div>.<hr>.<foot |
+65 72 3E 0A 3C 70 3E 26 63 6F 70 79 3B 20 32 30 32 32 2C 20 57 65 73 6C 65 | er>.<p>&copy; 2022, Wesle |
+79 20 4A 6F 6E 65 73 3C 2F 70 3E 0A 3C 2F 66 6F 6F 74 65 72 3E 0A 3C 2F 64 | y Jones</p>.</footer>.</d |
+69 76 3E 0A 3C 73 74 79 6C 65 3E 2E 66 6F 6F 74 65 72 2C 2E 67 65 6E 65 72 | iv>.<style>.footer,.gener |
+69 63 2D 66 6F 6F 74 65 72 7B 6D 61 72 67 69 6E 2D 62 6F 74 74 6F 6D 3A 39 | ic-footer{margin-bottom:9 |
+38 70 78 7D 40 6D 65 64 69 61 20 28 6D 69 6E 2D 77 69 64 74 68 3A 33 37 34 | 8px}@media (min-width:374 |
+70 78 29 7B 2E 66 6F 6F 74 65 72 2C 2E 67 65 6E 65 72 69 63 2D 66 6F 6F 74 | px){.footer,.generic-foot |
+65 72 7B 6D 61 72 67 69 6E 2D 62 6F 74 74 6F 6D 3A 37 38 70 78 7D 7D 40 6D | er{margin-bottom:78px}}@m |
+65 64 69 61 20 28 6D 69 6E 2D 77 69 64 74 68 3A 35 34 36 70 78 29 7B 2E 66 | edia (min-width:546px){.f |
+6F 6F 74 65 72 2C 2E 67 65 6E 65 72 69 63 2D 66 6F 6F 74 65 72 7B 6D 61 72 | ooter,.generic-footer{mar |
+67 69 6E 2D 62 6F 74 74 6F 6D 3A 35 36 70 78 7D 7D 40 6D 65 64 69 61 20 28 | gin-bottom:56px}}@media ( |
+6D 69 6E 2D 77 69 64 74 68 3A 31 30 35 35 70 78 29 7B 2E 66 6F 6F 74 65 72 | min-width:1055px){.footer |
+2C 2E 67 65 6E 65 72 69 63 2D 66 6F 6F 74 65 72 7B 6D 61 72 67 69 6E 2D 62 | ,.generic-footer{margin-b |
+6F 74 74 6F 6D 3A 30 7D 7D 2E 64 69 73 63 6C 61 69 6D 65 72 7B 70 6F 73 69 | ottom:0}}.disclaimer{posi |
+74 69 6F 6E 3A 66 69 78 65 64 3B 7A 2D 69 6E 64 65 78 3A 39 39 39 39 39 39 | tion:fixed;z-index:999999 |
+39 3B 62 6F 74 74 6F 6D 3A 30 3B 72 69 67 68 74 3A 30 3B 62 6F 72 64 65 72 | 9;bottom:0;right:0;border |
+2D 74 6F 70 3A 32 70 78 20 73 6F 6C 69 64 20 23 66 66 35 63 36 32 3B 74 65 | -top:2px solid #ff5c62;te |
+78 74 2D 61 6C 69 67 6E 3A 63 65 6E 74 65 72 3B 66 6F 6E 74 2D 73 69 7A 65 | xt-align:center;font-size |
+3A 31 34 70 78 3B 66 6F 6E 74 2D 77 65 69 67 68 74 3A 34 30 30 3B 62 61 63 | :14px;font-weight:400;bac |
+6B 67 72 6F 75 6E 64 2D 63 6F 6C 6F 72 3A 23 66 66 66 3B 70 61 64 64 69 6E | kground-color:#fff;paddin |
+67 3A 35 70 78 20 31 30 70 78 20 35 70 78 20 31 30 70 78 7D 2E 64 69 73 63 | g:5px 10px 5px 10px}.disc |
+6C 61 69 6D 65 72 20 61 3A 68 6F 76 65 72 7B 74 65 78 74 2D 64 65 63 6F 72 | laimer a:hover{text-decor |
+61 74 69 6F 6E 3A 75 6E 64 65 72 6C 69 6E 65 7D 40 6D 65 64 69 61 20 28 6D | ation:underline}@media (m |
+69 6E 2D 77 69 64 74 68 3A 31 30 35 32 70 78 29 7B 2E 64 69 73 63 6C 61 69 | in-width:1052px){.disclai |
+6D 65 72 7B 74 65 78 74 2D 61 6C 69 67 6E 3A 72 69 67 68 74 3B 62 6F 72 64 | mer{text-align:right;bord |
+65 72 2D 6C 65 66 74 3A 32 70 78 20 73 6F 6C 69 64 20 72 65 64 3B 62 6F 72 | er-left:2px solid red;bor |
+64 65 72 2D 74 6F 70 2D 6C 65 66 74 2D 72 61 64 69 75 73 3A 31 30 70 78 7D | der-top-left-radius:10px} |
+7D 40 6D 65 64 69 61 20 28 6D 69 6E 2D 77 69 64 74 68 3A 31 39 32 30 70 78 | }@media (min-width:1920px |
+29 7B 2E 64 69 73 63 6C 61 69 6D 65 72 7B 77 69 64 74 68 3A 36 30 25 7D 7D | ){.disclaimer{width:60%}} |
+3C 2F 73 74 79 6C 65 3E 3C 64 69 76 20 63 6C 61 73 73 3D 22 64 69 73 63 6C | </style><div class="discl |
+61 69 6D 65 72 22 3E 57 65 20 73 75 70 70 6F 72 74 20 55 6B 72 61 69 6E 65 | aimer">We support Ukraine |
+20 61 6E 64 20 63 6F 6E 64 65 6D 6E 20 77 61 72 2E 20 50 75 73 68 20 52 75 |  and condemn war. Push Ru |
+73 73 69 61 6E 20 67 6F 76 65 72 6E 6D 65 6E 74 20 74 6F 20 61 63 74 20 61 | ssian government to act a |
+67 61 69 6E 73 74 20 77 61 72 2E 20 42 65 20 62 72 61 76 65 2C 20 76 6F 63 | gainst war. Be brave, voc |
+61 6C 20 61 6E 64 20 73 68 6F 77 20 79 6F 75 72 20 73 75 70 70 6F 72 74 20 | al and show your support  |
+74 6F 20 55 6B 72 61 69 6E 65 2E 20 46 6F 6C 6C 6F 77 20 74 68 65 20 6C 61 | to Ukraine. Follow the la |
+74 65 73 74 20 6E 65 77 73 20 3C 61 20 74 69 74 6C 65 3D 22 68 74 74 70 73 | test news <a title="https |
+3A 2F 2F 77 77 77 2E 62 62 63 2E 63 6F 6D 2F 6E 65 77 73 2F 6C 69 76 65 2F | ://www.bbc.com/news/live/ |
+77 6F 72 6C 64 2D 65 75 72 6F 70 65 2D 36 30 35 31 37 34 34 37 22 20 74 61 | world-europe-60517447" ta |
+72 67 65 74 3D 22 5F 62 6C 61 6E 6B 22 20 68 72 65 66 3D 22 68 74 74 70 73 | rget="_blank" href="https |
+3A 2F 2F 77 77 77 2E 62 62 63 2E 63 6F 6D 2F 6E 65 77 73 2F 6C 69 76 65 2F | ://www.bbc.com/news/live/ |
+77 6F 72 6C 64 2D 65 75 72 6F 70 65 2D 36 30 35 31 37 34 34 37 22 20 73 74 | world-europe-60517447" st |
+79 6C 65 3D 22 63 6F 6C 6F 72 3A 20 62 6C 61 63 6B 3B 22 3E 3C 62 3E 48 45 | yle="color: black;"><b>HE |
+52 45 3C 2F 62 3E 3C 2F 61 3E 3C 2F 64 69 76 3E 3C 73 63 72 69 70 74 20 64 | RE</b></a></div><script d |
+61 74 61 2D 63 66 61 73 79 6E 63 3D 22 66 61 6C 73 65 22 20 73 72 63 3D 22 | ata-cfasync="false" src=" |
+2F 63 64 6E 2D 63 67 69 2F 73 63 72 69 70 74 73 2F 35 63 35 64 64 37 32 38 | /cdn-cgi/scripts/5c5dd728 |
+2F 63 6C 6F 75 64 66 6C 61 72 65 2D 73 74 61 74 69 63 2F 65 6D 61 69 6C 2D | /cloudflare-static/email- |
+64 65 63 6F 64 65 2E 6D 69 6E 2E 6A 73 22 3E 3C 2F 73 63 72 69 70 74 3E 3C | decode.min.js"></script>< |
+2F 62 6F 64 79 3E 0A 3C 73 63 72 69 70 74 3E 0A 20 20 20 20 20 20 76 61 72 | /body>.<script>.      var |
+20 65 20 3D 20 64 6F 63 75 6D 65 6E 74 2E 67 65 74 45 6C 65 6D 65 6E 74 73 |  e = document.getElements |
+42 79 54 61 67 4E 61 6D 65 28 22 64 69 76 22 29 3B 0A 20 20 20 20 20 20 65 | ByTagName("div");.      e |
+5B 65 2E 6C 65 6E 67 74 68 20 2D 31 5D 2E 72 65 6D 6F 76 65 28 29 3B 0A 20 | [e.length -1].remove();.  |
+20 3C 2F 73 63 72 69 70 74 3E 0A 3C 2F 68 74 6D 6C 3E 0A                   |  </script>.</html>. |
