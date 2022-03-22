@@ -39,6 +39,7 @@ namespace Sentinel
             }
             catch (SocketException ex)
             {
+                MessageBox.Show(ex.Message, "Error");
                 return false;
             }
         }
@@ -82,7 +83,8 @@ namespace Sentinel
                             Stopwatch s = new Stopwatch();
                             s.Start();
                             int max = 2000;
-                            client.ConnectAsync(ip, Port);
+                            label3.Text = "ConnectioN: Testing...";
+                            await client.ConnectAsync(ip, Port);
                             while (s.ElapsedMilliseconds < max && !client.Connected) ;
                             if (!client.Connected)
                             {

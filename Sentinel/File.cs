@@ -10,7 +10,6 @@ namespace Sentinel
     {
         static public string CreateFile()
         {
-            Stream myStream;
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
             saveFileDialog1.Filter = "All files (*.*)|*.*";

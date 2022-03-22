@@ -7,8 +7,9 @@ namespace Sentinel
 
     public partial class Main : Form
     {
+        object session;
         private Project project = new Project();
-        private object session;
+        private CommandExecutionClass commandExecutionClass;
         public Main()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Sentinel
             project.currentFilePath = file;
             string[] array = file.Split('\\');
             file = string.Join('\\', array.Take(array.Length - 1));
-            ListDirectory(treeView1, file);
+            ListDirectory(FileDisplayTree, file);
         }
 
         private void ListDirectory(TreeView treeView, string path)
@@ -59,7 +60,7 @@ namespace Sentinel
                 project.Close();
             }
             project.CreateProject();
-            ListDirectory(treeView1, project.projectDirectory);
+            ListDirectory(FileDisplayTree, project.projectDirectory);
         }
 
         private void fileToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -68,7 +69,7 @@ namespace Sentinel
             f3.ShowDialog();
             project.currentFilePath = f3.FilePath;
             project.IsProject = false;
-            ListDirectory(treeView1, project.currentFilePath);
+            ListDirectory(FileDisplayTree, project.currentFilePath);
         }
 
         private void projectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,7 +77,7 @@ namespace Sentinel
             OpenProject f4 = new OpenProject();
             f4.ShowDialog();
             project.projectDirectory = f4.ProjectPath;
-            ListDirectory(treeView1, project.projectDirectory);
+            ListDirectory(FileDisplayTree, project.projectDirectory);
             project.IsProject = true;
         }
 
@@ -85,12 +86,12 @@ namespace Sentinel
             project.Close();
             if (project.IsProject)
             {
-                ListDirectory(treeView1, project.projectDirectory);
+                ListDirectory(FileDisplayTree, project.projectDirectory);
                 project.IsProject = true;
             }
             else
             {
-                ListDirectory(treeView1, project.projectDirectory);
+                ListDirectory(FileDisplayTree, project.projectDirectory);
                 project.IsProject = false;
             }
         }
@@ -103,20 +104,6 @@ namespace Sentinel
         private void closeSafeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             project.Close();
-        }
-        private void OpenBinary(string filepath)
-        {
-            if (File.Exists(filepath))
-            {
-                byte[] data = File.ReadAllBytes(filepath);
-                var chunks = data.Split(45);
-                string temp = "";
-                foreach (var chunk in chunks)
-                {
-                    temp += BitConverter.ToString(chunk.ToArray()).Replace("-", " ") + "\n";
-                }
-                richTextBox2.Text = temp.Trim();
-            }
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -143,7 +130,7 @@ namespace Sentinel
                 }
                 if (File.Exists(path))
                 {
-                    richTextBox1.Text = File.ReadAllText(path);
+                    MainContentDisplay.Text = File.ReadAllText(path);
                     project.currentFilePath = path;
                     this.Text = "Sentinel Suite / " + path;
                 }
@@ -156,16 +143,18 @@ namespace Sentinel
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MainContentDisplay.Font = new Font(FontFamily.GenericMonospace, MainContentDisplay.Font.Size);
             project.currentFilePath = "output.tmp";
+            commandExecutionClass = new CommandExecutionClass();
         }
         private void hexdumpToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            OpenBinary(project.currentFilePath);
+            MainContentDisplay.Text = CommandExecutionClass.FormatHex(File.ReadAllBytes(project.currentFilePath), 25, "None", " ", true);
         }
 
         private void frequencyAnalysisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox2.Text = "";
+            SecondaryOutput.Text = "";
 
             int[] frequency = new int[256];
 
@@ -183,7 +172,7 @@ namespace Sentinel
             {
                 if (b != 0)
                 {
-                    richTextBox2.Text += ("0x" + i.ToString("X") + " : " + b.ToString() + "\n");
+                    SecondaryOutput.Text += ("0x" + i.ToString("X") + " : " + b.ToString() + "\n");
                 }
                 i++;
             }
@@ -203,7 +192,7 @@ namespace Sentinel
             }
             float percent = ((float)i / data.Length) * 100;
             string output = @"Percent of binary that is readable (0x20 - 0x7e): " + (percent.ToString("0.0000")) + "%\n" + (percent > 90 ? "Likey a text file." : "Not likey a text file.");
-            richTextBox2.Text = output;
+            SecondaryOutput.Text = output;
         }
         private double getStandardDeviation(byte[] byteList)
         {
@@ -221,7 +210,7 @@ namespace Sentinel
         }
         private void standardDeveationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            richTextBox2.Text = "Standard Deviation of bytes in file: " + getStandardDeviation(File.ReadAllBytes(project.currentFilePath)).ToString();
+            SecondaryOutput.Text = "Standard Deviation of bytes in file: " + getStandardDeviation(File.ReadAllBytes(project.currentFilePath)).ToString();
         }
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -249,10 +238,10 @@ namespace Sentinel
                 {
                     path = path.Substring(0, path.Length - 1);
                 }
-                richTextBox1.Text = File.ReadAllText(path);
+                MainContentDisplay.Text = File.ReadAllText(path);
                 project.currentFilePath = path;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             };
@@ -298,28 +287,28 @@ namespace Sentinel
         }
         public void SetOutput(string data)
         {
-            richTextBox1.Text = data;
+            MainContentDisplay.Text = data;
         }
 
         public void AppendOutput(string data)
         {
-            richTextBox1.Text += data + "\n";
+            MainContentDisplay.Text += data + "\n";
         }
-        private ExecuteCommand.Output LastOutput;
+        private CommandExecutionClass.Output LastOutput;
         private void richTextBox3_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == '\r')
             {
-                richTextBox1.Font = new Font(FontFamily.GenericMonospace, richTextBox1.Font.Size);
-                string[] commands = richTextBox3.Text.Trim().Split("\n");
+                MainContentDisplay.Font = new Font(FontFamily.GenericMonospace, MainContentDisplay.Font.Size);
+                string[] commands = CommandLineTextBox.Text.Trim().Split("\n");
                 string command = commands[commands.Length - 1];
-                ExecuteCommand.Output o = new ExecuteCommand.Output();
-                o = ExecuteCommand.Execute(command, project, LastOutput, richTextBox1.Text);
-                if (o.mode == ExecuteCommand.OutputMode.Set)
+                CommandExecutionClass.Output o = new CommandExecutionClass.Output();
+                o = commandExecutionClass.Execute(command, project, LastOutput, MainContentDisplay.Text);
+                if (o.mode == CommandExecutionClass.OutputMode.Set)
                 {
                     SetOutput(o.output.ToString());
                 }
-                else if (o.mode == ExecuteCommand.OutputMode.Append)
+                else if (o.mode == CommandExecutionClass.OutputMode.Append)
                 {
                     AppendOutput(o.output.ToString());
                 }
@@ -330,15 +319,15 @@ namespace Sentinel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (string command in richTextBox3.Text.Trim().Split("\n"))
+            foreach (string command in CommandLineTextBox.Text.Trim().Split("\n"))
             {
-                ExecuteCommand.Output o = new ExecuteCommand.Output();
-                o = ExecuteCommand.Execute(command, project, LastOutput);
-                if (o.mode == ExecuteCommand.OutputMode.Set)
+                CommandExecutionClass.Output o = new CommandExecutionClass.Output();
+                o = commandExecutionClass.Execute(command, project, LastOutput);
+                if (o.mode == CommandExecutionClass.OutputMode.Set)
                 {
                     SetOutput(o.output.ToString());
                 }
-                else if (o.mode == ExecuteCommand.OutputMode.Append)
+                else if (o.mode == CommandExecutionClass.OutputMode.Append)
                 {
                     AppendOutput(o.output.ToString());
                 }
@@ -352,13 +341,13 @@ namespace Sentinel
             {
                 if (project.IsProject)
                 {
-                    File.WriteAllText(project.projectDirectory + "output.tmp", richTextBox1.Text);
+                    File.WriteAllText(project.projectDirectory + "output.tmp", MainContentDisplay.Text);
                 }
                 else
                 {
                     string[] tmp = project.currentFilePath.Split('\\');
                     string t = string.Join("\\", tmp.Take(tmp.Length - 1)) + "\\" + "output.tmp";
-                    File.WriteAllText(t, richTextBox1.Text);
+                    File.WriteAllText(t, MainContentDisplay.Text);
                 }
             }
             catch (Exception ex)
@@ -369,29 +358,39 @@ namespace Sentinel
 
         private void stringToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            byte[] bytes = File.ReadAllBytes(project.currentFilePath);
-            List<string> strings = new List<string>();
+            const int MAX_BUFFER = 1024; //1MB 
+            byte[] buffer = new byte[MAX_BUFFER];
+            int bytesRead;
             string temp = "";
-            bool lastLineWasBlank = true;
-            foreach (byte b in bytes)
+            bool lastLineWasBlank = false;
+            using (FileStream fs = File.Open(project.currentFilePath, FileMode.Open, FileAccess.Read))
+            using (BufferedStream bs = new BufferedStream(fs))
             {
-                if (b >= 32 && b <= 126)
+                while ((bytesRead = bs.Read(buffer, 0, MAX_BUFFER)) != 0) //reading 1mb chunks at a time
                 {
-                    temp += (char)b;
-                    lastLineWasBlank = false;
-                }
-                else
-                {
-                    lastLineWasBlank = true;
-                }
-                if (lastLineWasBlank != false)
-                {
-                    strings.Add(temp);
+                    foreach (byte b in buffer)
+                    {
+                        if (b >= 32 && b <= 126)
+                        {
+                            temp += (char)b;
+                            lastLineWasBlank = false;
+                        }
+                        else
+                        {
+                            lastLineWasBlank = true;
+                        }
+                        if (lastLineWasBlank != false)
+                        {
+                            if (temp != "")
+                            {
+                                SecondaryOutput.Text += temp + "\n";
+                                temp = "";
+                            }
+                        }
+                    }
                 }
             }
-
-            string output = string.Join("\n", strings);
-            richTextBox2.Text = string.Join("\n", strings);
+            SecondaryOutput.Text = SecondaryOutput.Text.Trim();
             return;
         }
     }

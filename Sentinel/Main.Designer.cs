@@ -30,14 +30,14 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.MainContentDisplay = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.ExecuteButton = new System.Windows.Forms.Button();
+            this.CommandLineTextBox = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.SecondaryOutput = new System.Windows.Forms.RichTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.FileDisplayTree = new System.Windows.Forms.TreeView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +98,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.MainContentDisplay);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(281, 3);
@@ -107,27 +107,27 @@
             this.panel1.Size = new System.Drawing.Size(1107, 521);
             this.panel1.TabIndex = 1;
             // 
-            // richTextBox1
+            // MainContentDisplay
             // 
-            this.richTextBox1.AcceptsTab = true;
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.richTextBox1.Location = new System.Drawing.Point(10, 10);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1085, 499);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.MainContentDisplay.AcceptsTab = true;
+            this.MainContentDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.MainContentDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MainContentDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainContentDisplay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MainContentDisplay.ForeColor = System.Drawing.SystemColors.Window;
+            this.MainContentDisplay.Location = new System.Drawing.Point(10, 10);
+            this.MainContentDisplay.Name = "MainContentDisplay";
+            this.MainContentDisplay.Size = new System.Drawing.Size(1085, 499);
+            this.MainContentDisplay.TabIndex = 0;
+            this.MainContentDisplay.Text = "";
+            this.MainContentDisplay.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(44)))), ((int)(((byte)(97)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.richTextBox3);
+            this.panel2.Controls.Add(this.ExecuteButton);
+            this.panel2.Controls.Add(this.CommandLineTextBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(281, 530);
@@ -136,40 +136,40 @@
             this.panel2.Size = new System.Drawing.Size(1107, 252);
             this.panel2.TabIndex = 2;
             // 
-            // button1
+            // ExecuteButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ExecuteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(1022, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 76);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Execute Script";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ExecuteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(152)))));
+            this.ExecuteButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ExecuteButton.Location = new System.Drawing.Point(1022, 79);
+            this.ExecuteButton.Name = "ExecuteButton";
+            this.ExecuteButton.Size = new System.Drawing.Size(75, 76);
+            this.ExecuteButton.TabIndex = 1;
+            this.ExecuteButton.Text = "Execute Script";
+            this.ExecuteButton.UseVisualStyleBackColor = false;
+            this.ExecuteButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // richTextBox3
+            // CommandLineTextBox
             // 
-            this.richTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CommandLineTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(44)))), ((int)(((byte)(97)))));
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.ForeColor = System.Drawing.SystemColors.Info;
-            this.richTextBox3.Location = new System.Drawing.Point(5, 5);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(1007, 240);
-            this.richTextBox3.TabIndex = 0;
-            this.richTextBox3.Text = "";
-            this.richTextBox3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.richTextBox3_KeyUp);
+            this.CommandLineTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(44)))), ((int)(((byte)(97)))));
+            this.CommandLineTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CommandLineTextBox.ForeColor = System.Drawing.SystemColors.Info;
+            this.CommandLineTextBox.Location = new System.Drawing.Point(5, 5);
+            this.CommandLineTextBox.Name = "CommandLineTextBox";
+            this.CommandLineTextBox.Size = new System.Drawing.Size(1007, 240);
+            this.CommandLineTextBox.TabIndex = 0;
+            this.CommandLineTextBox.Text = "";
+            this.CommandLineTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.richTextBox3_KeyUp);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.richTextBox2);
+            this.panel3.Controls.Add(this.SecondaryOutput);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.ForeColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(3, 530);
@@ -177,38 +177,38 @@
             this.panel3.Size = new System.Drawing.Size(272, 252);
             this.panel3.TabIndex = 3;
             // 
-            // richTextBox2
+            // SecondaryOutput
             // 
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(270, 250);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.SecondaryOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SecondaryOutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SecondaryOutput.Location = new System.Drawing.Point(0, 0);
+            this.SecondaryOutput.Name = "SecondaryOutput";
+            this.SecondaryOutput.Size = new System.Drawing.Size(270, 250);
+            this.SecondaryOutput.TabIndex = 0;
+            this.SecondaryOutput.Text = "";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel4.Controls.Add(this.treeView1);
+            this.panel4.Controls.Add(this.FileDisplayTree);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(272, 521);
             this.panel4.TabIndex = 4;
             // 
-            // treeView1
+            // FileDisplayTree
             // 
-            this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.ForeColor = System.Drawing.Color.White;
-            this.treeView1.LineColor = System.Drawing.Color.White;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(272, 521);
-            this.treeView1.TabIndex = 0;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+            this.FileDisplayTree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.FileDisplayTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileDisplayTree.ForeColor = System.Drawing.Color.White;
+            this.FileDisplayTree.LineColor = System.Drawing.Color.White;
+            this.FileDisplayTree.Location = new System.Drawing.Point(0, 0);
+            this.FileDisplayTree.Name = "FileDisplayTree";
+            this.FileDisplayTree.Size = new System.Drawing.Size(272, 521);
+            this.FileDisplayTree.TabIndex = 0;
+            this.FileDisplayTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.FileDisplayTree.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
             // menuStrip1
             // 
@@ -501,8 +501,8 @@
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
-        private TreeView treeView1;
-        public RichTextBox richTextBox1;
+        private TreeView FileDisplayTree;
+        public RichTextBox MainContentDisplay;
         private ToolStripMenuItem hexdumpToolStripMenuItem;
         private ToolStripMenuItem analyzeToolStripMenuItem;
         private ToolStripMenuItem binaryToolStripMenuItem;
@@ -511,9 +511,9 @@
         private ToolStripMenuItem stringToolStripMenuItem;
         private ToolStripMenuItem fileTypeToolStripMenuItem;
         private ToolStripMenuItem metadataToolStripMenuItem;
-        private RichTextBox richTextBox2;
+        private RichTextBox SecondaryOutput;
         private ToolStripMenuItem standardDeveationToolStripMenuItem;
-        private RichTextBox richTextBox3;
-        private Button button1;
+        private RichTextBox CommandLineTextBox;
+        private Button ExecuteButton;
     }
 }
